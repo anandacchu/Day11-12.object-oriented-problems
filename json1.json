@@ -1,0 +1,44 @@
+"TypesOfRice": [
+    {
+      "name": "Basumathi",
+      "weight": 20,
+      "price": 120
+    },
+    {
+      "name": "Rice1",
+      "weight": 50,
+      "price": 80
+    }
+  ],
+  "TypesOfPluse": [
+    {
+      "name": "Greengram",
+      "weight": 10,
+      "price": 90
+    },
+    {
+      "name": "gram1",
+      "weight": 20,
+      "price": 100
+    }
+
+  ],
+  "TypesOfWheat": [
+    {
+      "name": "Wheat1",
+      "weight": 15,
+      "price": 50
+    },
+    {
+      "name": "Wheat2",
+      "weight": 35,
+      "price": 120
+    },
+    {
+      "name": "Wheat3",
+      "weight": 20,
+      "price": 60
+    }
+  ],
+  ]
+}

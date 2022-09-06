@@ -1,26 +1,62 @@
-﻿namespace JsonExample
+﻿namespace DataInventoryManagement
 {
-    class Program
+    class program
     {
-        public static void Main(String[] args)
+        public static void Main(string[] args)
         {
-            String path = "C:\\Users\\HP\\RFP.NET\\JsonExample\\JsonExample\\StockInventry.json";
-            //FetchJsonOfStock fetchJsonOf = new FetchJsonOfStock();
 
-            FetchJsonOfStock fetchJsonOfStock = new FetchJsonOfStock();
 
-            Stock inventory = fetchJsonOfStock.Read(path);
+            string Path = "E:\\bridgelabs\\DataInventoryManagement\\DataInventoryManagement\\Inventory.json";
 
-            for (int i = 0; i < inventory.banking.Count; i++)
+            FetchJsonForRice fetchJsonForRice = new FetchJsonForRice();
+
+            Rice data = fetchJsonForRice.Read(Path);
+
+            Console.WriteLine("-----------");
+            Console.WriteLine("Types of Rice");
+            Console.WriteLine("-----------");
+
+            for (int i = 0; i < data.typeOfRice.Count; i++)
             {
 
-                Console.WriteLine(inventory.banking[i].stockName);
-                Console.WriteLine(inventory.banking[i].numberOfShares);
-                Console.WriteLine(inventory.banking[i].price);
-
-                int value = inventory.banking[i].numberOfShares * inventory.banking[i].price;
-                Console.WriteLine("The price of {0} for {1}kg is: {2}", inventory.banking[i].stockName, inventory.banking[i].numberOfShares, inventory.banking[i].price);
+                Console.WriteLine(data.typeOfRice[i].name);
+                Console.WriteLine(data.typeOfRice[i].weight);
+                Console.WriteLine(data.typeOfRice[i].price);
                 Console.WriteLine("--------------------------");
+
+                int value = data.typeOfRice[i].weight * data.typeOfRice[i].price;
+                Console.WriteLine("The Price of {0} for {1} is", data.typeOfRice[i].name, data.typeOfRice[i].weight, data.typeOfRice[i].price);
+
+            }
+            Console.WriteLine("-----------");
+            Console.WriteLine("Types of Pluse");
+            Console.WriteLine("-----------");
+
+            for (int i = 0; i < data.typeOfPluse.Count; i++)
+            {
+
+                Console.WriteLine(data.typeOfPluse[i].name);
+                Console.WriteLine(data.typeOfPluse[i].weight);
+                Console.WriteLine(data.typeOfPluse[i].price);
+                Console.WriteLine("--------------------------");
+
+                int value = data.typeOfPluse[i].weight * data.typeOfPluse[i].price;
+                Console.WriteLine("The Price of {0} for {1} is", data.typeOfPluse[i].name, data.typeOfPluse[i].weight, data.typeOfPluse[i].price);
+            }
+            Console.WriteLine("-----------");
+            Console.WriteLine("Types of WheT");
+            Console.WriteLine("-----------");
+
+            for (int i = 0; i < data.typeOfWheat.Count; i++)
+            {
+
+                Console.WriteLine(data.typeOfWheat[i].name);
+                Console.WriteLine(data.typeOfWheat[i].weight);
+                Console.WriteLine(data.typeOfWheat[i].price);
+                Console.WriteLine("--------------------------");
+
+                int value = data.typeOfWheat[i].weight * data.typeOfWheat[i].price;
+                Console.WriteLine("The Price of {0} for {1} is", data.typeOfWheat[i].name, data.typeOfWheat[i].weight, data.typeOfWheat[i].price);
             }
         }
     }
